@@ -6,7 +6,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy service account key
-COPY gspread-key.json .
+# COPY gspread-key.json .
 
 # Copy application code
 COPY . .
