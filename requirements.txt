@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic
+gspread
+google-auth
+google-cloud-bigquery==3.19.0
+google-cloud-bigquery==3.19.0
+google-cloud-bigquery==3.19.0
