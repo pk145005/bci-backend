@@ -19,12 +19,12 @@ async def summary():
             "huddles": row.huddles_24h,
             "workouts": row.workouts_24h,
             "mobility_yes": row.mobility_yes_24h,
-            "avg_sleep_hours": float(row.avg_sleep_24h)
+            "avg_sleep_hours": float(row.avg_sleep_24h) if row.avg_sleep_24h is not None else None
         },
         "last_7d": {
             "huddles": row.huddles_7d,
             "workouts": row.workouts_7d,
             "mobility_yes": row.mobility_yes_7d,
-            "avg_sleep_hours": float(row.avg_sleep_7d)
+            "avg_sleep_hours": float(row.avg_sleep_7d) if row.avg_sleep_7d is not None else None
         }
     }
