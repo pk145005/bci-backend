@@ -6,3 +6,6 @@ google-auth
 google-cloud-bigquery==3.19.0
 google-cloud-bigquery==3.19.0
 google-cloud-bigquery==3.19.0
+python-dotenv
+anthropic
+httpx
