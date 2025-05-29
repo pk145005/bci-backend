@@ -9,3 +9,6 @@ google-cloud-bigquery==3.19.0
 python-dotenv
 anthropic
 httpx
+httpx>=0.24.0
+httpx
+anthropic

@@ -1,19 +1,24 @@
-from fastapi import FastAPI
-import logging
+from dotenv import load_dotenv
+load_dotenv()
 
-from app.api import summary as summary_api
-from app.api import huddle_ui
-from app.api import event as event_api
-from app.api.analysis import router as analysis_router
+import logging
+from fastapi import FastAPI
+
+from app.api.huddle_ui    import router as huddle_ui_router
+from app.api.event        import router as event_router
+from app.api.summary      import router as summary_router
+from app.api.analysis     import router as analysis_router
+from app.api.run_analysis import router as run_analysis_router
 
 logging.basicConfig(level=logging.INFO)
 
 app = FastAPI(title="BCI Core")
 
-app.include_router(huddle_ui.router)
-app.include_router(event_api.router)
-app.include_router(summary_api.router)
-app.include_router (analysis_router)
+app.include_router(huddle_ui_router)
+app.include_router(event_router)
+app.include_router(summary_router)
+app.include_router(analysis_router)
+app.include_router(run_analysis_router)
 
 DEFAULT_ERROR = "TEST_ERROR_ALERT"
 
